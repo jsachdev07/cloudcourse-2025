@@ -111,4 +111,3 @@ print(os.environ.get("MY_VAR"))
 - **Environment Variables**: System-wide settings that are accessible by Python, often used for configurations or sensitive data.
 ```
 
-Now you can easily copy and paste this Markdown content wherever you need it! Let me know if you need further help!
