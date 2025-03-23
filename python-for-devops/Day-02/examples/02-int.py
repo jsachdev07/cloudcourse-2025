@@ -1,10 +1,10 @@
 # Integer variables
 num1 = 10
-num2 = 5
+num2 = 2
 
 # Integer Division
 result1 = num1 // num2
-print("Integer Division:", result1)
+print("Integer Division (quotient):", result1)
 
 # Modulus (Remainder)
 result2 = num1 % num2
