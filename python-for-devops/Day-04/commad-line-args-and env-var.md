@@ -1,5 +1,3 @@
-Certainly! Here is the content again in Markdown format:
-
 ```markdown
 # Python Command Line Arguments and Environment Variables
 
