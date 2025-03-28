@@ -32,72 +32,63 @@ After opening a file in read mode, you can read its contents using several metho
 
 read(): Reads the entire content of the file.
 
-python
-Copy
+
 content = file.read()
 print(content)
 readline(): Reads one line from the file.
 
-python
-Copy
+
 line = file.readline()
 print(line)
 readlines(): Reads all lines into a list.
 
-python
-Copy
+
 lines = file.readlines()
 print(lines)
+
 4. Writing to a File
 To write to a file, you open it in 'w' (write) or 'a' (append) mode.
 
 write(): Writes a string to the file.
 
-python
-Copy
+
 file = open('example.txt', 'w')
 file.write('Hello, world!')
 file.close()
 writelines(): Writes a list of strings to the file.
 
-python
-Copy
+
 lines = ['Hello\n', 'World\n']
 file.writelines(lines)
+
 5. Closing a File
 It's important to close a file when you're done with it to free up system resources. This can be done using the close() method:
-
-python
-Copy
 file.close()
+
 6. Using with for Automatic File Closing
 To avoid manually closing files, Python provides the with statement, which automatically closes the file when the block is exited, even if an error occurs.
 
 Example:
 
-python
-Copy
 with open('example.txt', 'r') as file:
     content = file.read()
     print(content)
 # No need to call file.close(), it happens automatically
+
 7. Handling File Exceptions
 Sometimes, files might not exist, or there could be other errors (e.g., permission issues). You can handle these errors using a try-except block.
 
 Example:
 
-python
-Copy
 try:
     with open('nonexistent_file.txt', 'r') as file:
         content = file.read()
 except FileNotFoundError:
     print("The file does not exist.")
+
 8. Example of File Operations in Python
 Here's an example that demonstrates reading from, writing to, and appending to a file:
 
-python
-Copy
 # Write to a file
 with open('example.txt', 'w') as file:
     file.write("This is the first line.\n")
