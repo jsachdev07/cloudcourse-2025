@@ -49,7 +49,29 @@ Ensures Apache starts automatically on system reboot.
 To use this script, you would enter it into the UserData section while creating your EC2 instance.
 ```
 
-##abc
+2. Windows EC2 Instance Example:
+For a Windows EC2 instance, the UserData script would be written in PowerShell. Here's an example of a UserData script that installs IIS (Internet Information Services) on a Windows Server instance:
+
+Example PowerShell UserData script:
+powershell
+Copy
+<powershell>
+# Install IIS web server
+Install-WindowsFeature -Name Web-Server -IncludeManagementTools
+
+# Start IIS service
+Start-Service -Name W3SVC
+
+# Ensure IIS starts on boot
+Set-Service -Name W3SVC -StartupType Automatic
+</powershell>
+This script does the following:
+
+Installs the IIS web server.
+
+Starts the IIS service.
+
+Ensures IIS starts automatically when the server reboots.
 
 
 
