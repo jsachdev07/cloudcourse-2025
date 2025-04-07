@@ -8,7 +8,7 @@ Placement groups in AWS allow you to control how your EC2 instances are placed w
 
 > **Definition**: Instances are grouped together within a single availability zone (AZ) to provide low-latency network connectivity.
 
-**Setup**: All instances are placed in a single AZ.
+**Setup**: All instances are placed in a single rack in a single AZ.
 
 **Ideal For**:
 - High-performance computing applications.
