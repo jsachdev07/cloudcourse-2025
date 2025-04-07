@@ -47,5 +47,9 @@ Starts the Apache service.
 Ensures Apache starts automatically on system reboot.
 
 To use this script, you would enter it into the UserData section while creating your EC2 instance.
+```
 
-## Example of Using UserData
+##abc
+
+
+
