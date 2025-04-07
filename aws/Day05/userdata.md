@@ -23,7 +23,6 @@ Let's say you're launching a Linux EC2 instance (like an Ubuntu instance) and yo
 
 **Example UserData script:**
 
-```bash
 #!/bin/bash
 # Update the package repository
 apt-get update -y
@@ -49,11 +48,7 @@ Ensures Apache starts automatically on system reboot.
 To use this script, you would enter it into the UserData section while creating your EC2 instance.
 
 
-### 2. Windows EC2 Instance Example:
-
-**Example UserData script:**
-
-```bash
+2. Windows EC2 Instance Example:
 For a Windows EC2 instance, the UserData script would be written in PowerShell. Here's an example of a UserData script that installs IIS (Internet Information Services) on a Windows Server instance:
 
 Example PowerShell UserData script:
@@ -77,47 +72,3 @@ Installs the IIS web server.
 Starts the IIS service.
 
 Ensures IIS starts automatically when the server reboots.
-```bash
-
-### How to Set Up UserData When Launching an EC2 Instance:
-Through AWS Console:
-
-When you launch a new EC2 instance, you'll be asked for "Advanced Details" in the Configure Instance step.
-
-There is a field called User Data. You can paste your script there.
-
-The script will run when the instance first starts.
-
-Through AWS CLI: You can use the --user-data option in the aws ec2 run-instances command to provide the UserData script:
-
-bash
-Copy
-aws ec2 run-instances \
-  --image-id ami-xxxxxxxxxxxxxxxxx \
-  --instance-type t2.micro \
-  --key-name MyKeyPair \
-  --user-data file://userdata.sh
-This will launch an EC2 instance and pass the contents of the userdata.sh script as UserData.
-
-Accessing UserData:
-If you need to view or debug the script that has run, you can access the EC2 instance and check the system logs:
-
-For Linux instances, you can check /var/log/cloud-init.log and /var/log/cloud-init-output.log for detailed output.
-
-For Windows instances, you can check the EC2 Instance System Logs or use the CloudWatch Logs to track and debug.
-
-Key Use Cases for UserData:
-Provisioning: Automating the installation of common software and configurations.
-
-CloudFormation: Using CloudFormation to manage your infrastructure and include custom setup scripts.
-
-Elastic Load Balancer Setup: Automatically configuring web servers to register with an Elastic Load Balancer.
-
-Scaling: Automatically installing monitoring tools when scaling out EC2 instances in Auto Scaling Groups.
-
-Troubleshooting UserData:
-Make sure the script is executable (i.e., it begins with #!/bin/bash for Linux-based instances).
-
-Ensure that there are no syntax errors.
-
-Check logs if the script doesn't run correctly.
