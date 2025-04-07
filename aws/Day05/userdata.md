@@ -47,7 +47,7 @@ Starts the Apache service.
 Ensures Apache starts automatically on system reboot.
 
 To use this script, you would enter it into the UserData section while creating your EC2 instance.
-### 1. Linux EC2 Instance Example:
+
 2. Windows EC2 Instance Example:
 For a Windows EC2 instance, the UserData script would be written in PowerShell. Here's an example of a UserData script that installs IIS (Internet Information Services) on a Windows Server instance:
 
