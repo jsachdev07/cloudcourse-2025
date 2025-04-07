@@ -115,18 +115,3 @@ Make sure the script is executable (i.e., it begins with #!/bin/bash for Linux-b
 Ensure that there are no syntax errors.
 
 Check logs if the script doesn't run correctly.
-
-Let me know if you want more details or specific examples!
-
-vbnet
-Copy
-
-### Instructions:
-1. Copy the above content.
-2. Open any text editor and paste the content into a new file.
-3. Save the file with a `.md` extension, for example, `userdata-in-aws-ec2.md`.
-4. Now, you can upload this file to your GitHub repository.
-
-GitHub automatically renders Markdown files, so once you upload it to your repo, it will be displayed properly.
-
-Let me know if you need further help!
