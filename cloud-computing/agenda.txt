@@ -1,0 +1,8 @@
+March 31 --> Day01
+
+1. Basics of cloud computing
+- what is cloud computing
+- advantages of cloud computing
+- cloud deployment models (public, private, hybrid)
+- cloud service models (IaaS, PaaS, SaaS)
+=====================================
