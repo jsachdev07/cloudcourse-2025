@@ -1,0 +1,48 @@
+March 31 
+
+1. Basics of cloud computing
+- what is cloud computing
+- advantages of cloud computing
+- cloud deployment models (public, private, hybrid)
+- cloud service models (IaaS, PaaS, SaaS)
+=====================================
+April 1
+
+1. AWS Introduction
+- history of AWS
+- creating free tier account
+- understanding aws global infrastructure (regions, availability zones, local zones, wavelength zones, outposts)
+=====================================
+April 2
+
+1. understanding aws global infrastructure (edge location and regional edge locations)
+2. Elastic compute cloud (ec2)
+   - Virtualization 
+   - creating a windows vm
+   
+=====================================
+April 3
+ 1. create a linux vm 
+ 2. AMI (amazon machine images)
+ 3. Instance type 
+ 4. Multi AZ
+ 
+=====================================
+April 4
+
+Public IP
+Elastic IP
+Security Groups
+=====================================
+April 7
+
+User Data Scripts
+Termination and stop protection
+Placement Groups
+=====================================
+April 8
+
+AWS Tenancy
+EC2 instance purchase options
+AWS pricing calculator
+AWS CLI
