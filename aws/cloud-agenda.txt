@@ -37,4 +37,8 @@ April 8 --> Day06
 AWS Tenancy
 EC2 instance purchase options
 AWS pricing calculator
+
+=====================================
+April 9 --> Day07
+
 AWS CLI
