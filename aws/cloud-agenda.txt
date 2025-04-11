@@ -42,12 +42,19 @@ AWS pricing calculator
 April 9 --> Day07
 
 AWS command line interface
-Storage service (DAS, NAS, Object)
+Storage Type (DAS, NAS, Object)
 
 =====================================
 April 10 --> Day08
 
 Instance store and EBS
 Instance Store and EBS volume scenarios
-EBS Volume types SSD
 EBS Volume types HDD
+
+=====================================
+April 11 --> Day09
+
+EBS Volume types SSD
+EBS hands-on
+EBS snapshots and it's usecases
+Data Lifecycle manager
