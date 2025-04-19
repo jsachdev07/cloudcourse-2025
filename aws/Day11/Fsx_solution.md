@@ -110,16 +110,18 @@
 
 5. **Reboot the instance** after DNS changes.
 
+6. **Client 2 in us-east-1b** Repeat the same steps for windows server in us-east-1b
+
 ---
 
-## 🛠️ **Step 5: Join Client1 to the Domain**
+## 🛠️ **Step 5: Join Client1 and Client2 to the Domain**
 
-1. **On Client1**, go to **System Properties** → **Change settings** → **Change**.
+1. **On Client1 and on Client2**, go to **System Properties** → **Change settings** → **Change**.
 2. Choose **Domain** and enter `abc.local` as the domain.
 3. Provide **domain credentials** (e.g., `Administrator`).
 4. Click **OK** and restart the server to complete the domain join.
 
-Once restarted, **Client1** should be part of the `abc.local` domain.
+Once restarted, **Client1 and Client2** should be part of the `abc.local` domain.
 
 ---
 
@@ -140,7 +142,7 @@ Once restarted, **Client1** should be part of the `abc.local` domain.
 
 Once your **FSx file system** is created and ready:
 
-1. **On Client1 (Windows Server 2 in us-east-1a)**:
+1. **On Client1 (Windows Server us-east-1a)**:
    - Open **Command Prompt** or **PowerShell** as Administrator.
    - Mount the FSx file system:
      ```powershell
@@ -148,7 +150,7 @@ Once your **FSx file system** is created and ready:
      ```
    - Replace `fs-xxxxxxxx.fsx.us-east-1.amazonaws.com` with the actual FSx DNS name and `share-name` with the share you want to access.
 
-2. **On Client2 (Windows Server 3 in us-east-1b)**:
+2. **On Client2 (Windows Server in us-east-1b)**:
    - Same as **Client1**, run the **net use** command to mount the FSx share.
 
    **Note**: You may need to use **domain credentials** to authenticate and access the FSx share.
