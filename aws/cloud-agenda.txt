@@ -58,3 +58,15 @@ EBS Volume types SSD
 EBS hands-on
 EBS snapshots and it's usecases
 Data Lifecycle manager
+=====================================
+April 14 --> Day10
+
+EFS (Elastic file storage)
+EFS options and hands-on
+=====================================
+April 15 --> Day11
+
+FSx Introduction
+Active Directory Introduction
+FSx Options and Hands-on
+=====================================
