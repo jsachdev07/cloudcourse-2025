@@ -70,3 +70,25 @@ FSx Introduction
 Active Directory Introduction
 FSx Options and Hands-on
 =====================================
+April 24 --> Day 12
+
+Introduction to VPC
+IP address schema and subnets
+classful vs classless IP addresss
+=====================================
+April 25 --> Day 13
+
+VPC Hands-on
+create VPC, subnets, Internet Gateway, Route Table
+=====================================
+April 28 --> Day 14
+
+VPC Recap
+2-tier architecture of applications
+Public Subnet vs Private Subnet
+How to connect instances in private subnet (bastion host and EC2 instance connect endpoint)
+NAT Gateway
+=====================================
+April 29 --> Day 15
+
+VPC peering
