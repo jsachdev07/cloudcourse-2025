@@ -92,3 +92,6 @@ NAT Gateway
 April 29 --> Day 15
 
 VPC peering
+Transit Gateway
+Network Access Control List (NACL)
+NACL vs Security Groups
