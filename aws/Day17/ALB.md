@@ -76,7 +76,7 @@ This guide walks through creating a full HTTP ALB architecture in AWS Mumbai (`a
 - Attach `EC2-SG` Security Group
 - Use following **User Data** (Amazon Linux):
 
-```bash
+```
 #!/bin/bash
 # Install Apache Web Server and PHP
 yum update -y
@@ -130,6 +130,7 @@ EOF
 # Enable and start the Apache Web Server
 systemctl enable httpd
 systemctl start httpd
+```
 
 ## 🎯 8. Create Target Group
 Target type: Instance
