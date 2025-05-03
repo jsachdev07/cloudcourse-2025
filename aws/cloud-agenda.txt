@@ -10,15 +10,13 @@ April 2 --> Day02
 1. understanding aws global infrastructure (edge location and regional edge locations)
 2. Elastic compute cloud (ec2)
    - Virtualization 
-   - creating a windows vm
-   
+   - creating a windows vm   
 =====================================
 April 3 --> Day03
  1. create a linux vm 
  2. AMI (amazon machine images)
  3. Instance type 
- 4. Multi AZ
- 
+ 4. Multi AZ 
 =====================================
 April 4 --> Day04
 
@@ -37,20 +35,17 @@ April 8 --> Day06
 AWS Tenancy
 EC2 instance purchase options
 AWS pricing calculator
-
 =====================================
 April 9 --> Day07
 
 AWS command line interface
 Storage Type (DAS, NAS, Object)
-
 =====================================
 April 10 --> Day08
 
 Instance store and EBS
 Instance Store and EBS volume scenarios
 EBS Volume types HDD
-
 =====================================
 April 11 --> Day09
 
@@ -93,5 +88,16 @@ April 29 --> Day 15
 
 VPC peering
 Transit Gateway
+=====================================
+May 1 --> Day 16
+
 Network Access Control List (NACL)
 NACL vs Security Groups
+DHCP option set
+Managed Prefix list
+=====================================
+May 2 --> Day 17
+
+LoadBalancer in AWS
+- Application Load balancer
+- ALB use case and Hands-on
