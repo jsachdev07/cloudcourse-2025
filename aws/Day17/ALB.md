@@ -131,7 +131,7 @@ EOF
 systemctl enable httpd
 systemctl start httpd
 
-🎯 8. Create Target Group
+## 🎯 8. Create Target Group
 Target type: Instance
 
 Protocol: HTTP
@@ -146,7 +146,7 @@ Register Targets:
 
 Add both EC2 instances
 
-⚖️ 9. Create Application Load Balancer (ALB)
+## ⚖️ 9. Create Application Load Balancer (ALB)
 Name: MyALB
 
 Scheme: Internet-facing
@@ -165,14 +165,14 @@ Add Listener Rule:
 
 Forward to: Target Group created above
 
-✅ 10. Test the Setup
+## ✅ 10. Test the Setup
 Open the ALB DNS name in a browser
 
 You should see responses from the EC2 instances
 
 Refresh to test round-robin load balancing
 
-🏁 Done!
+## 🏁 Done!
 Your architecture now looks like:
 
 
