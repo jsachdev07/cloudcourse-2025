@@ -101,3 +101,13 @@ May 2 --> Day 17
 LoadBalancer in AWS
 - Application Load balancer
 - ALB use case and Hands-on
+=====================================
+May 5 --> Day 18
+
+DNS (Domain name service)
+Route53 (AWS DNS service)
+=====================================
+May 6 --> Day 19
+
+Path based vs Host based routing option in ALB
+Network Load Balancer
