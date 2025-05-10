@@ -21,14 +21,16 @@ Enable auto-assign public IP
 Security Group: Allow HTTP (80) and SSH (22)
 
 User Data Script (Advanced → User data):
-'''
+
+```
 #!/bin/bash
 yum update -y
 yum install -y httpd
 systemctl start httpd 
 systemctl enable httpd
 echo "<h1> Welcome to the App1 page of Web Server </h1>" > /var/www/html/index.html
-'''
+
+```
 🔹 EC2 Instance 2: WebServer-App2
 Launch EC2 Instance
 
@@ -37,14 +39,14 @@ Same configuration as App1
 Name: WebServer-App2
 
 User Data Script:
-'''
+```
 #!/bin/bash
 yum update -y
 yum install -y httpd
 systemctl start httpd 
 systemctl enable httpd
 echo "<h1> Welcome to the App2 page of Web Server </h1>" > /var/www/html/index.html
-'''
+```
 ### 🎯 PART 2: Create Target Groups
 Go to EC2 → Target Groups → Create Target Group
 
