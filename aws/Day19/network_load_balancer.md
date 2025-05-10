@@ -1,8 +1,8 @@
 
-🧰 AWS Network Load Balancer (NLB) Full Setup Guide
+### 🧰 AWS Network Load Balancer (NLB) Full Setup Guide
 Use Case: Set up a Network Load Balancer to forward TCP traffic on port 80 to two EC2 instances running a basic Apache HTTP server.
 
-🧭 What is a Network Load Balancer (NLB)?
+### 🧭 What is a Network Load Balancer (NLB)?
 Operates at Layer 4 (Transport Layer).
 
 Supports TCP, UDP, and TLS.
@@ -11,10 +11,8 @@ Designed for high-performance and low-latency use cases.
 
 Routes traffic purely based on IP and port, without inspecting the request (no HTTP headers, cookies, etc.).
 
-📌 Architecture Overview
-text
-Copy
-Edit
+### 📌 Architecture Overview
+
             +-----------------------------+
             |     Network Load Balancer  |
             |      (TCP on Port 80)       |
@@ -24,7 +22,7 @@ Edit
       | EC2: WebServer1 |   | EC2: WebServer2 |
       | Apache on port 80|  | Apache on port 80|
       +------------------+   +-----------------+
-🖥️ PART 1: Launch EC2 Instances with Apache
+### 🖥️ PART 1: Launch EC2 Instances with Apache
 We'll launch two EC2 instances with Apache to serve HTTP content on port 80.
 
 🔹 Step-by-Step: Create EC2 Instances
@@ -49,10 +47,7 @@ Create or choose a security group:
 Inbound rule: allow TCP port 80 from 0.0.0.0/0
 
 User Data Script (for Apache install):
-
-bash
-Copy
-Edit
+```
 #!/bin/bash
 yum update -y
 yum install -y httpd
@@ -60,10 +55,10 @@ systemctl start httpd
 systemctl enable httpd
 echo "<h1>Hello from $(hostname)</h1>" > /var/www/html/index.html
 Click Launch
-
+```
 Repeat for both instances.
 
-🧩 PART 2: Create Target Group (TCP)
+### 🧩 PART 2: Create Target Group (TCP)
 Target groups in NLB are responsible for managing where the traffic goes (your EC2 instances).
 
 🔹 Steps:
@@ -91,7 +86,7 @@ Port: 80
 
 Click Create target group
 
-🌐 PART 3: Create Network Load Balancer
+### 🌐 PART 3: Create Network Load Balancer
 🔹 Steps:
 Go to EC2 → Load Balancers → Create Load Balancer
 
@@ -123,7 +118,7 @@ Listener → Forward to nlb-tcp-group
 
 Click Create Load Balancer
 
-🔍 PART 4: Test NLB
+### 🔍 PART 4: Test NLB
 🔹 Get the NLB DNS Name:
 Go to EC2 → Load Balancers
 
@@ -147,7 +142,7 @@ You should see:
 <h1>Hello from ip-172-31-xx-xx</h1>
 
 
-📍 Important Notes
+### 📍 Important Notes
 Feature	NLB Support
 Host-based routing	❌ No
 Path-based routing	❌ No
@@ -156,7 +151,7 @@ HTTP headers inspection	❌ No
 IP-based target support	✅ Yes
 Static IPs via EIPs	✅ Optional
 
-🛡️ Security Group Settings
+### 🛡️ Security Group Settings
 Ensure your EC2 instance’s security group allows inbound traffic on port 80 from 0.0.0.0/0 or from the NLB's VPC CIDR block if private.
 
-⚠️ NLB does not associate with a security group itself (unlike ALB). It just forwards raw TCP traffic to targets.
+### ⚠️ NLB does not associate with a security group itself (unlike ALB). It just forwards raw TCP traffic to targets.
