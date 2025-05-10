@@ -71,7 +71,7 @@ Introduction to VPC
 IP address schema and subnets
 classful vs classless IP addresss
 =====================================
-April 25 --> Day 13
+April --> Day 13
 
 VPC Hands-on
 create VPC, subnets, Internet Gateway, Route Table
@@ -109,5 +109,18 @@ Route53 (AWS DNS service)
 =====================================
 May 6 --> Day 19
 
-Path based vs Host based routing option in ALB
-Network Load Balancer
+Path based vs Host based routing options in ALB
+Network Load Balancer (NLB)
+=====================================
+May 7 --> Day 20
+
+cross zone Load Balancing
+Gateway Load Balancer (GLB)
+VPC ingress Routing
+VPC ingress Routing (hands-on)
+=====================================
+May 9 --> Day 21
+
+Gateway Load Balancer
+GWLB hands-on
+classic loadbalancer
