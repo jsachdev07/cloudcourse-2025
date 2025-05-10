@@ -28,7 +28,7 @@ yum update -y
 yum install -y httpd
 systemctl start httpd 
 systemctl enable httpd
-echo "<h1> Welcome to the App1 page of Web Server </h1>" > /var/www/html/index.html
+echo "<h1> Welcome to the App1 </h1>" > /var/www/html/index.html
 
 ```
 🔹 EC2 Instance 2: WebServer-App2
@@ -45,7 +45,7 @@ yum update -y
 yum install -y httpd
 systemctl start httpd 
 systemctl enable httpd
-echo "<h1> Welcome to the App2 page of Web Server </h1>" > /var/www/html/index.html
+echo "<h1> Welcome to the App2 </h1>" > /var/www/html/index.html
 ```
 ### 🎯 PART 2: Create Target Groups
 Go to EC2 → Target Groups → Create Target Group
