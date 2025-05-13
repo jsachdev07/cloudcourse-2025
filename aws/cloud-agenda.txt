@@ -124,3 +124,25 @@ May 9 --> Day 21
 Gateway Load Balancer
 GWLB hands-on
 classic loadbalancer
+=====================================
+May 12 --> Day 22
+
+AutoScaling (AS)
+Vertical Scaling vs Horizontal Scaling 
+Launch Templates
+Auto Scaling Groups
+Manual option of AS
+Scheduled option of AS
+=====================================
+May 13 --> Day 23
+
+Dynamic Option of AS
+Predictive option of AS
+Instance maintenance Policy 
+Termination Policy 
+ELB vs ASG
+=====================================
+May 14 --> Day 24
+
+Capstone project 
+=====================================
