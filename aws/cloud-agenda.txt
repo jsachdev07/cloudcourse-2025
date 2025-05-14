@@ -71,7 +71,7 @@ Introduction to VPC
 IP address schema and subnets
 classful vs classless IP addresss
 =====================================
-April --> Day 13
+April 25 --> Day 13
 
 VPC Hands-on
 create VPC, subnets, Internet Gateway, Route Table
@@ -139,7 +139,7 @@ May 13 --> Day 23
 Dynamic Option of AS
 Predictive option of AS
 Instance maintenance Policy 
-Termination Policy 
+Termination Policy (scale-in)
 ELB vs ASG
 =====================================
 May 14 --> Day 24
