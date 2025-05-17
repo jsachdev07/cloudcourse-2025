@@ -144,5 +144,20 @@ ELB vs ASG
 =====================================
 May 14 --> Day 24
 
-Capstone project 
+Capstone project 1
 =====================================
+May 15 --> Day 25
+
+Identity and Access Management (IAM)
+IAM AWS Managed Policies
+IAM customer Managed Policies
+IAM Inline Policies
+=====================================
+May 16 --> Day 26
+
+IAM Entities (users and groups)
+IAM Entities (roles)
+- AWS Service
+- AWS account role
+
+
