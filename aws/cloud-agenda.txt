@@ -157,7 +157,31 @@ May 16 --> Day 26
 
 IAM Entities (users and groups)
 IAM Entities (roles)
-- AWS Service
-- AWS account role
+- AWS Service role
+=====================================
+May 19 --> Day 27
 
+AWS account role
+Best Practices for Root account
+Simple storage service (S3)
+=====================================
+May 20 --> Day 28
+
+S3 Storage Classes
+S3 Versioning
+S3 Data Lifecycle Rule
+=====================================
+May 21 --> Day 29
+
+Access control to Buckets
+- IAM Policy
+- Bucket Policy
+- Bucket ACL
+S3 Object Locking
+=====================================
+May 22 --> Day 30
+
+S3 Bucket Public Access
+S3 static web hosting
+Cloud Front
 
