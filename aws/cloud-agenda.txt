@@ -184,4 +184,9 @@ May 22 --> Day 30
 S3 Bucket Public Access
 S3 static web hosting
 Cloud Front
+=====================================
+May 23 --> Day 31
 
+Cloud Front Hands-on
+Cloud Front options
+HTTPS acces using cloud front
