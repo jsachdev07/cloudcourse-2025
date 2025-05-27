@@ -188,5 +188,21 @@ Cloud Front
 May 23 --> Day 31
 
 Cloud Front Hands-on
-Cloud Front options
 HTTPS acces using cloud front
+=====================================
+May 26 --> Day 32
+
+Cloud Front options
+Origin Access
+Origin Groups
+=====================================
+May 27 --> Day 33
+
+Geographical failover using cloudfront
+error handling in cloudfront
+cache invalidation 
+AWS Global Accelerator
+=====================================
+May 28 --> Day 34
+
+AWS Databases
