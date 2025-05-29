@@ -205,4 +205,20 @@ AWS Global Accelerator
 =====================================
 May 28 --> Day 34
 
-AWS Databases
+Introduction to Databases
+Relational Database Services (RDS)
+Why RDS
+On-Prem DB vs EC2 Databases vs RDS
+RDS hands-on
+=====================================
+May 29 --> Day 35
+
+Connect RDS with EC2 instances
+password settings
+Availability and durability
+Credential settings
+Instance configuration
+=====================================
+May 30 --> Day 36
+
+Storage
