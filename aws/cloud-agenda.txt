@@ -222,3 +222,9 @@ Instance configuration
 May 30 --> Day 36
 
 Storage
+subnet groups
+backups and snapshots
+maintenance
+read replicas
+Blue Green Deployment
+=====================================
