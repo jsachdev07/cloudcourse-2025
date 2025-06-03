@@ -228,3 +228,9 @@ maintenance
 read replicas
 Blue Green Deployment
 =====================================
+Jun 3 --> Day 37
+
+AWS Lambda Service
+EC2 vs Lambda
+Lambda Hands-on
+Lambda demo with triggers
