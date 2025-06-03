@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevCloudHub Lambda Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .branding {
+            background-color: #0073e6;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .start {
+            background-color: #28a745;
+            color: white;
+        }
+        .stop {
+            background-color: #dc3545;
+            color: white;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="branding">DevCloudHub Lambda Demo</div>
+        <h1>Manage Your EC2 Instance</h1>
+        <button class="start" onclick="triggerAPI('start')">Start EC2</button>
+        <button class="stop" onclick="triggerAPI('stop')">Stop EC2</button>
+    </div>
+
+    <script>
+        function triggerAPI(action) {
+            let startApiUrl = "https://1l190ii608.execute-api.ap-south-1.amazonaws.com/default/ec2-start";
+            let stopApiUrl = "https://kps1loab6g.execute-api.ap-south-1.amazonaws.com/default/ec2-stop";
+
+            let apiUrl = action === "start" ? startApiUrl : stopApiUrl;
+
+            fetch(apiUrl, { method: "GET" })
+                .then(response => console.log("API triggered:", response))
+                .catch(error => console.error("Error:", error));
+        }
+    </script>
+
+</body>
+</html>
