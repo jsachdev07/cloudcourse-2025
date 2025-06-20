@@ -1,0 +1,86 @@
+VNET - VNET CONNECTION USING VPN GATEWAYS (VIRTUAL NETWORK GATEWAYS)
+---------------------------------------------------------------------
+
+- Resources can communicate using private IPS
+
+- You need VPN Gateways
+
+- You need a special subnet called as GatewaySubnet. Under GatewaySubnet only you can create the Virtual Network gateway, without this you cannot create Virtual Network GATEWAY. 
+
+- You should remember one thing, in a VNET, you should have sufficient IP range available for GatewaySubnet.
+
+- Here the connection will happen over public network (internet)
+
+- Over internet we are setting up a VPN connection using IPSec tunnel and hence you need Public IP
+
+- For encryption of traffic IKE protocol (Internet Key Exchange protocol)
+
+- In a VNET, only 1 GatewaySubnet can exist
+
+
+STEPS
+	------
+1. Go to Vnet1 > create GatewaySubnet
+2. Create VPN Gateway for Vnet1
+	- Select vnet1, VPN Gateway type, route based, configure an IP, add active-active
+3. Go to Vnet2 > create GatewaySubnet
+4. Create VPN Gateway for Vnet2
+	- Select vnet2, VPN Gateway type, route based, configure an IP, add active-active
+5. Create a connection (at both ends i.e. in vnet1gw1 and vnet2gw2)> type will be vnet to vnet connection, provide encryption key and setup connection
+
+=======================================================================================================================
+Gateway Types
+===============
+1. VPN (you use it when you want to create VPN connection between on-prem and azure or between azure - azure vnets.
+2. ExpressRoute: you use it when you want to do express route connection between onprem and azure with dedicated private connectivity
+
+
+VPN Types
+==========
+Route based: dynamic routing. Means you will use it when you want newly added subnets/CIDRs to be detected by VPN Connection automatically
+Policy based: when you want static routing. You use this when you want to do manual routing configurations.
+
+SKU
+====
+It will be determined based on how much bandwidth you need it.
+
+
+SKU is short for 'Stock-keeping-Unit'. It basically stands for an item which is on sale, in lamen language. In terms of the Microsoft Azure cloud, they basically signify a purchasable SKU under a product. It has a bunch of different shapes of the product
+
+Azure VPN gateways have a default ASN of 65515 assigned, whether BGP is enabled or not for your cross-premises connectivity. You can override this default by assigning a different ASN when you're creating the VPN gateway, or you can change the ASN after the gateway is created
+
+
+Connectivity
+------------
+
+VNET-VNET:
+----------
+When you want to setup the connectivity between two virtual networks that are created on Azure.
+
+Site-to-site
+------------
+Use between 2 networks in azure in different azure subscriptions or between azure vnet and on-prem vnet or between azure vnet and other cloud network (ex. aws/gcp networks)
+	- 2 VPN Gateways 
+	- IPSec Tunnel
+	- IKE
+
+
+P2S Connection
+==============
+	- Between a VPN Gateway and a VPN Client (think about using it when a client in remote network (like home) wants to connect azure network and then to any resources like VM using its private IP.
+	- IPSec Tunnel between client and azure network
+	- IKE v2/SSTP/OpenVPN
+
+ You need the certificate by provider/generate self signed cert
+
+
+
+
+S2S vs Express Route
+====================
+ - 2 options to connect on-prem and Azure Vnets
+ - S2S is slow and ER is fast
+ - S2S is over internet and ER is over pvt line
+ - S2S traffic is encrypted and ER is not encrypted (obviously app level encryption can be done)
+ - S2S is cheaper and ER is costly
+=====================

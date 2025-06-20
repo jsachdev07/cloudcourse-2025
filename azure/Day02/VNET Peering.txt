@@ -1,0 +1,17 @@
+Vnet peering
+●	Regional VNet peering connects Azure virtual networks in the same region.
+
+●	Global VNet peering connects Azure virtual networks in different regions. When creating a global peering, the peered virtual networks can exist in any Azure public cloud region or China cloud regions, but not in Government cloud regions. You can only peer virtual networks in the same region in Azure Government cloud regions.
+
+VNET-VNET PEERING:
+	- You can setup this between 2 virtual networks on azure platform.
+	- VNETS can be in same region or in different region
+	- If in same region (local peering connection/regional vnet peering)
+	- If in different region (global vnet peering)
+	- CIDR blocks should be unique to setup peering.
+	- Traffic will flow over private network (using azure backbone network)
+
+- VNET1 (10.104.0.0/16) SN1: 10.104.0.0/24 ---> VM1----------> EAST US------> RG1-----> 10.104.0.4
+-  VNET2 (192.168.0.0/16) SN2: 192.168.0.0/24 ---> VM2---> WEST US------> RG2-----> 192.168.0.4
+	
+

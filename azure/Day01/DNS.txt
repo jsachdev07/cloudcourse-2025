@@ -1,0 +1,33 @@
+DNS: Domain name service/system
+
+Helps you to resolve names to the IP Addresses
+
+Public IP: used over internet
+
+Private IP Addresses: used in your local environment/Company network.
+
+
+
+Public DNS: Resolve domain names over internet
+
+facebook.com
+
+
+Private DNS: Resolves domain names in local environment/intranet/company network.
+
+
+Azure DNS: Helps to to resolves domain names to IP addresses
+
+
+SOA: Start of Authority record: Primary DNS Servers thats is responsible for domain name resolution
+NS: Name server record: Primary + secondary DNS Server.
+
+A: Host record: resolves name to IP address
+
+CNAME: Canonical name record: 
+
+wwww > devcloudhub.info > wwww.devcloudhub.info
+
+MX: Mail server
+
+TXT: Text record: confirm that you own this domain

@@ -1,0 +1,17 @@
+Jun 18 --> Day 1
+
+Introduction to Azure
+Azure Tenant, subscription, resource groups
+Creating a web server on a VM
+DNS to host our website
+==============================================
+Jun 19 --> Day 2
+
+Lab part of vm and dns
+Vnet (virtual network)
+
+==============================================
+Jun 20 --> Day 3
+
+Vnet peering
+Vnet Gateway (VPN gateway and ExpressRoute)

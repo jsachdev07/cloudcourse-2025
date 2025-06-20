@@ -1,0 +1,201 @@
+Agenda Day 1
+============
+1. MS Azure Basics--Subscription, Resource Groups, Resources
+2. Azure DNS Zones
+   --- Public DNS Zones
+   --- Private DNS Zones
+
+===================================================================
+
+Free azure subs:
+
+$200 credit for a month
+
+Convert to pay az you go after a month free trial
+
+To create free account:
+https://azure.microsoft.com/en-us/free
+
+Pay As go account:
+
+
+On premise
+
+1. Capital Expenditure
+2. Operational Expenditure
+
+
+In cloud
+
+1. Operational Expenditure
+
+
+
+Azure has multiple regions
+
+Each region has multiple data centers (Availability zones)
+
+You can choose one of regions: and then deploy your resources in that region in multiple data centers 
+so that you can get the high availability of your apps that you are running in azure.
+
+**********Subscriptions**********
+================================
+Every azure subscription will be assigned a unique subscription id. Subscription id will be useful to make any API calls to azure cloud platform.
+
+
+Why multiple azure subscriptions?
+1. For different set of environments ex. dev/ qa/ prod, etc.
+2. To segregate access to set of vendors to a particular subscription
+for segregating resources ex. I want to use 1 azure account for internal resources, 1 azure account 
+for my partner1, 1 account for partner2, and so on
+
+
+Why multiple subscriptions?
+I want to manage my resources efficiently for every different environment.
+Development
+QA
+PRODUCTION
+
+
+===============
+
+*********Deployment models*********
+
+
+1. ARM Model: resource manager model: latest model of deployment of resources on azure
+
+	    - based on JSON (Java script object notation)
+				     
+ 	    - Automation is much easy
+				      
+	    - You can deploy multiple resources at a time
+				      
+	    - You can deploy a complete solution in one go (App: 3 tier app: front end tier, middile tier, backend tier -----> ARM temmplate)
+
+
+
+2. Classic model: ASM (Azure service manager/classic model): older method of deployment of resources on azure
+		- XML Schema
+							    
+		- Automation is bit difficult
+							    
+		- You had to deploy one resource at a time
+
+
+===============================
+Resource group: Logical container to hold all resources together in azure. You can create resource groups based on departments/ projects so that you can logically group respective resources correspoinding to that project. Plus, you can grant role based access control at Resorce group level.
+
+
+One resource will always be part of one resource group only.
+
+
+
+3 users working for project1
+prject1-rg: 2 users admin : owner access
+            1 user reader: reader access
+
+To create any resource, you need to create resource group.
+
+
+
+==============
+
+Resource group: logical container where you can store any resources and segragate based on the projects
+
+project1----> RG1
+	- Manager1
+	-Team member1, Team member2
+
+Project2---->RG2
+	-Manager2
+        - TM3, TM4
+
+You can control access to the resources easily this way.Access control will be much easier with resource groups
+
+
+RG: Location (ex. east us)
+can contain resources from various other locations.
+
+
+
+EX1
+RG1---> East us
+          -TM1 West US-----------------> STG Account1 --> West US
+
+	  -TM2 Europe location----------> STG ACt2--> Europe location 
+
+Resources can be from any location
+ex of different resources can be a VM, Storage accnt, Virtual network, subnet, public IP, NIC card
+
+ARM also gives you ability to group your resources by using a concept called as Resource groups.
+
+RG-Project1 ----> East US------------------> grant project1 users access at RG level
+       VM1 ----> East US
+       VM2-----> Southeast asia
+       VM3-----> West europe
+
+
+============
+***********Methods of deploying resources*********
+====================================================
+1. By using portal
+2. Using cloudshell (1. Bash 2. PowerShell)
+3. PowerShell installed on your machine (You have to install Az module of POWERSHELL)
+4. ARM templates: You create ARM templates that are based on JSON language that helps you to create resources in one go by using a template.This is one of the most efficient method to create resources.
+5. Terraform/Ansible/Chef/Puppet: DevOps tools (Configuration management Tool)
+6. SDKs provided by Azure for different langugages.
+==========================================================================
+DNS: Domain name service/system
+
+Helps you to resolve names to the IP Addresses
+
+Public IP: used over internet
+
+Private IP Addresses: used in your local environment/Company network.
+
+
+Public DNS: Resolve domain names over internet
+
+facebook.com
+
+Private DNS: Resolves domain names in local environment/intranet/company network.
+
+
+Azure DNS: Helps to to resolves domain names to IP addresses
+
+
+SOA: Start of Authority record: Primary DNS Server that is responsible for domain name resolution
+NS: Name server record: Primary + secondary DNS Server.
+
+A: Host record: resolves name to IP address
+
+
+
+Private DNS Zones
+
+VNET1
+
+VM1: 192.168.0.4
+
+VM2: 10.104.0.4
+
+private DNS Zone----adatum.local
+
+VM1.adatum.local
+
+VM2.adatum.local
+
+
+10.0.0.4
+
+mylinuxvm1.adatum.local
+
+
+
+
+
+
+
+
+
+

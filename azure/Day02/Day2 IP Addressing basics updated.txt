@@ -1,0 +1,187 @@
+Basics of networking
+====================
+
+IPv4
+32 bit address
+4 octets, each octet carries 8 bits=32 bits
+
+A.B.C.D
+192.168.0.4 ---> IPv4 address
+
+Private IP Address: It is used in VNET
+10.0.0.0/8
+172.16.0.0/12
+192.168.0.0/16
+
+2 Types of IP Addresses
+1. Public IP: USED Over internet. Which is routable over internet
+2. Private IP: used within private network. (Intranet)
+
+
+Private IP address example:
+
+
+Private IP addresses in Azure
+
+10.0.0.0/8
+172.16.0.0/12
+192.168.0.0/16
+
+
+CIDR Block: It is nothing but a block  of an IP Address (range of IPs)
+
+192.168.0.0/24 ---> CIDR Block
+
+/24--> subnet mask
+
+1. What is the overall IP address range in this network?
+2. What is the usable IP range in this network?
+3. What is the subnet mask representation?
+
+overall IP address range in this network = 2^n
+
+n = IPv4 = 32 bit address = 32 - 24 = 8 
+
+
+overall IP address range in this network = 2^n = 2^8 = 256 : 192.168.0.0 - 192.168.0.255
+
+usable IP range in this network = 2^n - 2
+
+why -2?
+1. First address is network address
+2. last address is broadcast address
+
+
+usable IP range in this network = 2^n - 2= 256 -2 = 254: 192.168.0.1 -  192.168.0.254
+
+
+24 = 8+8+8+0
+
+subnet mask representation
+
+128 64 32 16 8 4 2 1     128 64 32 16 8 4 2 1      128 64 32 16 8 4 2 1      128 64 32 16 8 4 2 1
+1   1  1  1  1 1 1 1      1   1  1  1 1 1 1 1       1   1  1 1  1 1 1 1      0   0   0 0  0 0 0 0
+
+255                               255                255                            0
+
+255.255.255.0
+
+Subnet mask can be helpful to find out the addresses in a particular network.
+============================
+
+10.0.0.0/23
+
+n = 32 - 23 = 9
+
+
+1. What is the overall IP address range in this network? = 2^n = 2^9 = 512: 10.0.0.0 - 10.0.0.255 - 256
+ 									    10.0.1.0 - 10.0.1.255 - 256
+
+10.0.0.0 - 10.0.1.255------------overall ip range
+
+
+2. What is the usable IP range in this network? = 2^n - 2 = 512 - 2 = 510
+
+							10.0.0.1 - 10.0.1.254
+
+3. What is the subnet mask representation?
+
+
+23 = 8+8+7+0
+
+128 64 32 16 8 4 2 1     128 64 32 16 8 4 2 1      128 64 32 16 8 4 2 1      128 64 32 16 8 4 2 1
+1    1  1 1  1 1 1 1      1   1  1  1 1 1 1 1       1   1  1  1 1 1 1 0       0   0 0  0  0 0 0 0
+255                        255                       254                          0
+
+255.255.254.0
+============
+
+
+Azure networking
+
+overall IP address range in this network = 2^n
+
+usable IP range in this network = 2^n - 5
+
+Why -5?
+1. Network address
+2. Broadcast
+3. 1 Address is a DHCP Address
+4. 1 address is a router
+5. 1 address MS reserves for future use
+=====
+
+today = 100 servers
+future = 100 servers (10 years down the line)
+Departments = 4
+Total address = 100+100 = 200 servers x4 = 800 servers
+
+/24 = 2^n = 2^8 = 256
+/23 = 2^n = 2^9 = 512
+
+/22 = 2^10 = 1024/4 = 256 (each subnet/department)
+
+256 = /24
+
+Network = /22
+	Subnets = /24
+
+
+10.0.0.0
+172.16.0.0
+192.168.0.0
+
+VNET = 10.0.0.0/22
+VNET = 172.16.0.0/22
+VNET = 192.168.0.0/22
+
+192.168.0.0 -192.168.0.255 --- 256 --- SN1 --- 5 addresses will subtracted from each subnet --- vm1  (192.168.0.4 - 192.168.0.254)
+
+192.168.1.0 - 192.168.1.255 -- 256  --- SN2 ---5 -- vm2  (192.168.1.4 - 192.168.1.254)
+192.168.2.0 - 192.168.2.255 -- 256 --- SN3 ---5  ---  (192.168.2.4 - 192.168.2.254)
+192.168.3.0 - 192.168.3.255 - 256 --- SN4 ---5  ----  (192.168.3.4 - 192.168.3.254)
+
+
+----------------------------------------------------------
+My today's requirement = 200 hosts
+future = 20 hosts
+Departments = 2
+
+overall requirement: 200+20 = 220x2 = 440 hosts
+
+
+/24 = 256
+/23 = 512/2 = 256
+
+172.16.0.0/23 --- vnet
+
+172.16.0.0 - 172.16.0.255---256 ----sn1---- 172.16.0.0/24------vm1---172.16.0.4 - 172.16.0.254---251
+172.16.1.0 - 172.16.1.255---256 ----sn2----172.16.1.0/24---------------vm2--172.16.1.4 - 172.16.1.254
+--------------------------------
+512 
+
+-----------------------------------------------------------------------------------
+
+My today's requirement = 50 hosts
+future = 100 hosts
+Departments = 9
+
+Overall requirement=150x9=1350 hosts
+
+/24 = 256
+/23 = 512
+/22 = 1024
+/21 = 2048 = 2048/9 = 227.56
+/20 = 4096 =4096-2304=1792
+for subnets
+
+/24=256= 256x9= 2304
+===============================================
+
+/30 
+
+4-5=-1
+
+/29
+8-5 =3
+
